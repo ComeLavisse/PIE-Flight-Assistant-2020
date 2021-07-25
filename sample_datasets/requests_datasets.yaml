@@ -1,0 +1,143 @@
+# weatherAirport Intent
+---
+type: intent
+name: weatherAirport
+slots:
+  - name: place
+    entity: airport
+  - name: info
+    entity: weatherInfo
+utterances:
+  - give me the [info] at [place]
+  - i need the [info] in [place]
+  - what is the [info] at [place] ?
+  - can i have the [info] at [place] ?
+
+# NearestAirport Intent
+---
+type: intent
+name: nearestAirport
+utterances:
+  - give me the nearest airport
+  - can you give me the nearest airfield
+
+# LandingAirport Intent
+---
+type: intent
+name: landingAirport
+utterances:
+  - give me the nearest airport i can land on
+  - where can i land now ?
+  - emergency landing
+
+# LandingDistance Intent
+---
+type: intent
+name: landingDistance
+utterances:
+  - give me my landing distance
+  - what is the needed distance to land
+  - how many meters are needed to land
+  - what is my landing distance
+  - compute the landing distance please
+
+# Maximum Achievable Range Intent
+---
+type: intent
+name: MAR
+utterances:
+  - give me the maximal achievable range
+  - what is the maximal distance i can fly
+  - what is my maximal achievable range
+  - how far can i go
+
+# Airport Intent
+---
+type: intent
+name: checklist
+slots:
+  - name: phase
+    entity: flightPhase
+utterances:
+  - begin [phase] checklist
+  - start the [phase] check please
+  - can you give me the [phase] checklist
+
+# Speed Intent
+---
+type: intent
+name: speed
+slots:
+  - name: phase
+    entity: speedPhase
+utterances:
+  - what is my [phase] speed ?
+  - How fast should i do the [phase] ?
+  - Give me the [phase] speed
+  - Calculate the [phase] speed please
+
+# Antiicing Intent
+---
+type: intent
+name: antiicing
+utterances:
+  - do i need anti-icing now
+  - are there icing conditions
+  - should i switch the anti-icing on
+
+# fuelRemaining Intent
+---
+type: intent
+name: fuelRemaining
+utterances:
+  - what is the fuel remaining
+  - how much fuel do i have
+  - how many fuel in my aircraft
+
+
+#############################################################################
+
+# Airport Entity
+---
+type: entity
+name: airport
+values:
+  - [LFPO, Paris Orly, Paris, Orly, departure]
+  - [LFBO, Toulouse, Toulouse Blagnac, Blagnac, arrival, destination]
+
+# WeatherInfo Entity
+---
+type: entity
+name: weatherInfo
+values:
+  - wind speed
+  - wind orientation
+  - [weather, weather forecast, metar]
+
+# flightPhase Entity
+---
+type: entity
+name: flightPhase
+values:
+  - taxi
+  - [take-off, takeoff, take off]
+  - [cruise, en route, en-route]
+  - approach
+  - landing
+
+# speedPhase Entity
+---
+type: entity
+name: speedPhase
+values:
+  - approach
+  - landing
+
+# Performance Entity
+---
+type: entity
+name: performance
+values:
+  - landing distance
+  - optimal altitude
+  - remaining fuel

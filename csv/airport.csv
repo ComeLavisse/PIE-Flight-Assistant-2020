@@ -1,0 +1,6 @@
+Index;AirportGPSLatitude;AirportGPSLongitude;AirportParkingSpot;AirportCTRGround;AirportCTRLanding;AirportCTRTakeOff;AirportName;AirportIsDeparture;AirportEstimatedDepartureTime;AirportIsArrival;AirportEstimatedTimeOfArrival;AirportARFFIndex;AirportICAOCode;HasRunway;AirportOpeningHours;CTRActiveHours;Fuel;WidthTaxiway;Handling
+1;48.72;2.38;2;121.705;118.700;124.450;'Paris_Orly';0;0;1;63.4;9;'LFPO';['02','20','06','24','07','25'];'Always';'Always';'JET A-1 and 100LL';'10 m';'Passengers and ground'
+2;44.83;-0.72;3;121.900;118.300;129.875;'Bordeaux_Merignac';0;0;0;0;8;'LFBD';['05','23','11','29'];'Always';'Always';'JET A-1 and 100LL';'10 m';'Passengers and ground'
+3;44.17;0.59;4;121.300;120.355;124.885;'Agen_La_Garenne';0;0;0;0;5;'LFBA';['11','29'];'Always';'8 - 20';'JET A-1 and 100LL';'7 m';'Passengers'
+4;43.58;3.96;2;121.955;118.775;130.855;'Montpellier_Mediterranee';0;0;0;0;7;'LFMT';['12L','30R'];'Always';'Always';'JET A-1 and 100LL';'8 m';'Passengers and ground'
+5;43.63;1.37;3;121.9;181.1;121.105;'Toulouse_Blagnac';1;0;0;0;9;'LFBO';['14R','32L','14L','32R'];'Always';'Always';'JET A-1 and 100LL';'10 m';'Passengers and ground'

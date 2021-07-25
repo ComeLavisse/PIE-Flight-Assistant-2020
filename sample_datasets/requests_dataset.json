@@ -1,0 +1,273 @@
+{
+  "entities": {
+    "airport": {
+      "automatically_extensible": true,
+      "data": [
+        {
+          "synonyms": [
+            "Orly",
+            "LFPO"
+          ],
+          "value": "Paris Orly"
+        },
+        {
+          "synonyms": [
+            "Blagnac",
+            "LFBO"
+          ],
+          "value": "Toulouse Blagnac"
+        },
+        {
+          "synonyms": [
+            "destination"
+          ],
+          "value": "arrival"
+        },
+        {
+          "synonyms": [],
+          "value": "departure"
+        }
+      ],
+      "matching_strictness": 1.0,
+      "use_synonyms": true
+    },
+    "flightPhase": {
+      "automatically_extensible": true,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "taxi"
+        },
+        {
+          "synonyms": [
+            "takeoff",
+            "take off"
+          ],
+          "value": "take-off"
+        },
+        {
+          "synonyms": [
+            "en route",
+            "en-route"
+          ],
+          "value": "cruise"
+        },
+        {
+          "synonyms": [],
+          "value": "approach"
+        },
+        {
+          "synonyms": [],
+          "value": "landing"
+        }
+      ],
+      "matching_strictness": 1.0,
+      "use_synonyms": true
+    },
+    "weatherInfo": {
+      "automatically_extensible": true,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "wind"
+        },
+        {
+          "synonyms": [
+            "weather forecast",
+            "metar"
+          ],
+          "value": "weather"
+        },
+        {
+          "synonyms": [],
+          "value": "ceiling"
+        },
+        {
+          "synonyms": [],
+          "value": "visibility"
+        }
+      ],
+      "matching_strictness": 1.0,
+      "use_synonyms": true
+    }
+  },
+  "intents": {
+    "checklist": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "begin "
+            },
+            {
+              "entity": "flightPhase",
+              "slot_name": "phase",
+              "text": "taxi"
+            },
+            {
+              "text": " checklist"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "start the "
+            },
+            {
+              "entity": "flightPhase",
+              "slot_name": "phase",
+              "text": "take-off"
+            },
+            {
+              "text": " check please"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "can you give me the "
+            },
+            {
+              "entity": "flightPhase",
+              "slot_name": "phase",
+              "text": "takeoff"
+            },
+            {
+              "text": " checklist"
+            }
+          ]
+        }
+      ]
+    },
+    "landingAirport": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "give me the nearest airport i can land on"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "where can i land now ?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "emergency landing"
+            }
+          ]
+        }
+      ]
+    },
+    "nearestAirport": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "give me the nearest airport"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "can you give me the nearest airfield"
+            }
+          ]
+        }
+      ]
+    },
+    "weatherAirport": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "give me the "
+            },
+            {
+              "entity": "weatherInfo",
+              "slot_name": "info",
+              "text": "wind"
+            },
+            {
+              "text": " at "
+            },
+            {
+              "entity": "airport",
+              "slot_name": "place",
+              "text": "Paris Orly"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "i need the "
+            },
+            {
+              "entity": "weatherInfo",
+              "slot_name": "info",
+              "text": "weather"
+            },
+            {
+              "text": " in "
+            },
+            {
+              "entity": "airport",
+              "slot_name": "place",
+              "text": "Orly"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "what is the "
+            },
+            {
+              "entity": "weatherInfo",
+              "slot_name": "info",
+              "text": "weather forecast"
+            },
+            {
+              "text": " at "
+            },
+            {
+              "entity": "airport",
+              "slot_name": "place",
+              "text": "LFPO"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "can i have the "
+            },
+            {
+              "entity": "weatherInfo",
+              "slot_name": "info",
+              "text": "metar"
+            },
+            {
+              "text": " at "
+            },
+            {
+              "entity": "airport",
+              "slot_name": "place",
+              "text": "Toulouse Blagnac"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "language": "en"
+}
